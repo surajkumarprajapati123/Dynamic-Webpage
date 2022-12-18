@@ -1,0 +1,26 @@
+{{#each banner}}
+<section class="banner2_section py-5 background1">
+  <div class="container">
+    <div class="row">
+           <div class="col-md-6 text-center pt-5">
+{{!-- thise is test side --}}
+        <h3>
+        {{this.title}}</h3>
+          <p>
+            {{this.subtitle}}
+          </p>
+          <button class=" btn btn-primary">{{this.linkconnection}}</button>
+
+              </div>
+         <div class="col-md-6 text-center">
+  {{!-- thise is right side image postion --}}
+           <img  class="img" src="{{this.imageurl}}" style="height: 250px;" alt="">
+      </div>
+        
+    </div>
+  </div>
+ 
+   
+
+</section>
+{{/each}}

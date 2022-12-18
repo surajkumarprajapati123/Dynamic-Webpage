@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title></title>
+  </head>
+  <body>
+    {{>navbar data=detail}}
+    <div class="full_img" id="full_imgBox">
+      <img src="/static/image/s4.jpg" id="fullimg">
+      <span onclick="closefullImge()">X</span>
+    </div>
+   <div class="imge_galary mt-5">
+    <img src="/static/image/s1.jpeg" onclick="openfullImge(this.src)">
+    <img src="/static/image/s3.jpeg" onclick="openfullImge(this.src)" >
+    <img src="/static/image/s2.jpeg" onclick="openfullImge(this.src)" >
+    <img src="/static/image/s4.jpeg" onclick="openfullImge(this.src)" >
+    <img src="/static/image/s7.jpeg" onclick="openfullImge(this.src)" >
+    <img src="/static/image/image.jpg" onclick="openfullImge(this.src)" >
+   </div>
+  
+  
+ 
+    <script>
+
+    var full_imgBox = document.getElementById('full_imgBox')
+    var fullimg = document.getElementById('fullimg')
+
+    function openfullImge(pic)
+    {
+      full_imgBox.style.display= "flex"
+      fullimg.src=pic;
+    }
+    function closefullImge()
+    {
+
+full_imgBox.style.display= "none"
+    }
+    
+    </script>
+
+  </body>
+</html>
